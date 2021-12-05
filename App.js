@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { StyleSheet, Text, View, SafeAreaView, BackHandler, Platform } from 'react-native';
 import { WebView } from 'react-native-webview';
-// import { getStatusBarHeight } from "react-native-status-bar-height"; 
+import { getStatusBarHeight } from "react-native-status-bar-height"; 
 
 export default function App() {
   
@@ -21,12 +21,10 @@ export default function App() {
 
   
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: 'black' }}>
-      <WebView 
-        source={{ uri: 'http://rlawogud928.cafe24.com' }}
-        style={styles.container}
-      />
-    </SafeAreaView>
+    <WebView 
+      source={{ uri: 'http://rlawogud928.cafe24.com' }}
+      style={styles.container}
+    />
   );
 }
 
@@ -36,7 +34,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    // paddingTop: getStatusBarHeight()
-    paddingTop: 20
+    paddingTop: getStatusBarHeight()
   },
 });
